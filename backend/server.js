@@ -1,0 +1,61 @@
+require("dotenv").config();
+
+const express = require("express");
+const cors = require("cors");
+
+const authRoutes = require("./routes/authRoutes");
+const depositRoutes = require("./routes/depositRoutes");
+const dashboardRoutes = require("./routes/dashboardRoutes");
+const transactionRoutes = require("./routes/transactionRoutes");
+const withdrawalRoutes = require("./routes/withdrawalRoutes");
+const userRoutes = require("./routes/userRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+
+console.log("authRoutes:", typeof authRoutes);
+console.log("depositRoutes:", typeof depositRoutes);
+console.log("dashboardRoutes:", typeof dashboardRoutes);
+console.log("transactionRoutes:", typeof transactionRoutes);
+console.log("withdrawalRoutes:", typeof withdrawalRoutes);
+console.log("userRoutes:", typeof userRoutes);
+console.log("adminRoutes:", typeof adminRoutes);
+
+const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  }),
+);
+
+app.use(express.json());
+
+// ==============================
+// ROUTES
+// ==============================
+
+app.use("/api/auth", authRoutes);
+
+app.use("/api/deposits", depositRoutes);
+
+app.use("/api/dashboard", dashboardRoutes);
+
+app.use("/api/transactions", transactionRoutes);
+
+app.use("/api/withdrawals", withdrawalRoutes);
+
+app.use("/api/users", userRoutes);
+
+app.use("/api/admin", adminRoutes);
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "API running",
+  });
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
