@@ -10,6 +10,7 @@ const transactionRoutes = require("./routes/transactionRoutes");
 const withdrawalRoutes = require("./routes/withdrawalRoutes");
 const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const supportRoutes = require("./routes/supportRoutes");
 
 const app = express();
 
@@ -42,6 +43,8 @@ app.use("/api/withdrawals", withdrawalRoutes);
 app.use("/api/users", userRoutes);
 
 app.use("/api/admin", adminRoutes);
+
+app.use("/api/support", supportRoutes);
 
 app.get("/", (req, res) => {
   res.json({
