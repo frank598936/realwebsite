@@ -8,9 +8,13 @@ exports.createChat = async (req, res) => {
   try {
     const { user_id } = req.body;
 
-    if (!user_id) {
+    if (error) {
+      console.log("CREATE CHAT ERROR:", error);
+
       return res.status(400).json({
-        message: "User ID required",
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
       });
     }
 
@@ -66,8 +70,12 @@ exports.sendMessage = async (req, res) => {
       .single();
 
     if (error) {
+      console.log("SEND MESSAGE ERROR:", error);
+
       return res.status(400).json({
         message: error.message,
+        details: error.details,
+        hint: error.hint,
       });
     }
 
