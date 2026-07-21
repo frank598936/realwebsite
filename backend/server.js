@@ -11,21 +11,16 @@ const withdrawalRoutes = require("./routes/withdrawalRoutes");
 const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
-console.log("authRoutes:", typeof authRoutes);
-console.log("depositRoutes:", typeof depositRoutes);
-console.log("dashboardRoutes:", typeof dashboardRoutes);
-console.log("transactionRoutes:", typeof transactionRoutes);
-console.log("withdrawalRoutes:", typeof withdrawalRoutes);
-console.log("userRoutes:", typeof userRoutes);
-console.log("adminRoutes:", typeof adminRoutes);
-
 const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://realwebsite-eight.vercel.app"
+    ],
     credentials: true,
-  }),
+  })
 );
 
 app.use(express.json());
