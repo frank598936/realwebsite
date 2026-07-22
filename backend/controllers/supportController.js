@@ -8,13 +8,9 @@ exports.createChat = async (req, res) => {
   try {
     const { user_id } = req.body;
 
-    if (error) {
-      console.log("CREATE CHAT ERROR:", error);
-
+    if (!user_id) {
       return res.status(400).json({
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
+        message: "User ID is required",
       });
     }
 
@@ -28,19 +24,24 @@ exports.createChat = async (req, res) => {
       .single();
 
     if (error) {
+      console.log("CREATE CHAT ERROR:", error);
+
       return res.status(400).json({
         message: error.message,
+        details: error.details,
+        hint: error.hint,
       });
     }
 
     res.status(201).json(chat);
   } catch (error) {
+    console.log("SERVER ERROR:", error);
+
     res.status(500).json({
       message: error.message,
     });
   }
 };
-
 // =====================================
 // SEND MESSAGE
 // =====================================
