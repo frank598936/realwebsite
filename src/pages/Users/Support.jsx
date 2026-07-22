@@ -42,25 +42,27 @@ export default function Support() {
   // SEND MESSAGE
 
   async function sendMessage() {
-    if (!message) return;
 
-    try {
-      await API.post("/support/message", {
-        chat_id: chatId,
+  console.log("chatId:", chatId);
+  console.log("message:", message);
 
-        sender: "user",
+  if (!message) return;
 
-        message,
-      });
+  try {
+    await API.post("/support/message", {
+      chat_id: chatId,
+      sender: "user",
+      message,
+    });
 
-      setMessage("");
+    setMessage("");
 
-      loadMessages();
-    } catch (error) {
-      console.log(error);
-    }
+    loadMessages();
+
+  } catch (error) {
+    console.log(error.response?.data);
   }
-
+}
   useEffect(() => {
     if (user) {
       createChat();

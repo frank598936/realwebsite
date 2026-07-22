@@ -8,13 +8,15 @@ exports.createChat = async (req, res) => {
   try {
     const { user_id } = req.body;
 
+    console.log("USER ID RECEIVED:", user_id);
+
     if (!user_id) {
       return res.status(400).json({
         message: "User ID is required",
       });
     }
 
-    const { data: chat, error } = await supabase
+    const { data, error } = await supabase
       .from("support_chats")
       .insert({
         user_id,
@@ -24,21 +26,18 @@ exports.createChat = async (req, res) => {
       .single();
 
     if (error) {
-      console.log("CREATE CHAT ERROR:", error);
+      console.log("SUPABASE ERROR:", error);
 
-      return res.status(400).json({
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
-      });
+      return res.status(400).json(error);
     }
 
-    res.status(201).json(chat);
-  } catch (error) {
-    console.log("SERVER ERROR:", error);
+    res.json(data);
+
+  } catch (err) {
+    console.log("SERVER ERROR:", err);
 
     res.status(500).json({
-      message: error.message,
+      message: err.message,
     });
   }
 };
