@@ -3,14 +3,14 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  createChat,
+  getOrCreateChat,
 
   sendMessage,
 
   getMessages,
 } = require("../controllers/supportController");
 
-router.post("/create", createChat);
+router.post("/chat", getOrCreateChat);
 
 router.post("/message", sendMessage);
 

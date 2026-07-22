@@ -15,7 +15,7 @@ export default function Support() {
 
   async function createChat() {
     try {
-      const response = await API.post("/support/create", {
+      const response = await API.post("/support/chat", {
         user_id: user.id,
       });
 
