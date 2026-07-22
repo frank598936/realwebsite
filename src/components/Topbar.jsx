@@ -57,7 +57,7 @@ export default function Topbar({ setOpen }) {
           <span>{user?.role}</span>
         </div>
 
-        <button className="btn" onClick={handleLogout}>
+        <button className="logout-btn" onClick={handleLogout}>
           Logout
         </button>
       </div>

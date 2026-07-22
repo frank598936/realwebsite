@@ -1501,3 +1501,796 @@ to {
 }
 
 }
+
+
+/* ==================================
+   FINAL MOBILE OPTIMIZATION
+================================== */
+
+
+@media(max-width:768px){
+
+
+/* GLOBAL */
+
+body{
+overflow-x:hidden;
+}
+
+
+/* HOME NAVBAR */
+
+.container{
+
+padding:15px;
+
+}
+
+
+.logo{
+
+font-size:22px;
+
+}
+
+
+/* HERO */
+
+.hero{
+
+min-height:auto;
+
+padding:50px 20px;
+
+}
+
+
+.hero h1{
+
+font-size:2rem;
+
+}
+
+
+.hero p{
+
+font-size:15px;
+
+}
+
+
+.hero-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+}
+
+
+.hero-stats{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+
+/* SECTIONS */
+
+.features,
+.plans,
+.how-it-works,
+.why-section,
+.testimonials,
+.cta{
+
+padding:50px 20px;
+
+}
+
+
+.section-title h2,
+.why-text h2,
+.cta h2{
+
+font-size:2rem;
+
+}
+
+
+/* AUTH */
+
+.auth-page{
+
+padding:20px;
+
+}
+
+
+.auth-box{
+
+padding:25px 18px;
+
+border-radius:15px;
+
+}
+
+
+/* DASHBOARD */
+
+
+/* topbar */
+
+.topbar{
+
+padding:12px 15px;
+
+}
+
+
+.page-title h2{
+
+font-size:18px;
+
+}
+
+
+.user-area{
+
+gap:5px;
+
+}
+
+
+
+/* sidebar */
+
+.sidebar{
+
+width:260px;
+
+}
+
+
+
+/* main */
+
+.main{
+
+padding:15px;
+
+}
+
+
+
+/* welcome */
+
+.welcome-banner{
+
+padding:20px;
+
+}
+
+
+.welcome-banner h1{
+
+font-size:22px;
+
+}
+
+
+
+/* cards */
+
+.balance-cards,
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px;
+
+}
+
+
+
+.balance-card,
+.stat-card{
+
+padding:15px;
+
+}
+
+
+
+.balance-card h3,
+.stat-card h3{
+
+font-size:14px;
+
+}
+
+
+.balance-card p,
+.stat-card p{
+
+font-size:20px;
+
+}
+
+
+
+/* forms */
+
+.transaction-input{
+
+padding:18px;
+
+}
+
+
+.transaction-input input,
+.transaction-input select{
+
+font-size:16px;
+
+padding:12px;
+
+}
+
+
+/* TABLE */
+
+
+.table-container{
+
+overflow-x:auto;
+
+}
+
+
+table{
+
+min-width:650px;
+
+}
+
+
+
+/* PROFILE */
+
+
+.profile-details .profile-row{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:8px;
+
+}
+
+
+
+/* MODAL */
+
+
+.modal-box{
+
+width:90%;
+
+}
+
+
+
+/* NOTIFICATION */
+
+.notification{
+
+left:15px;
+
+right:15px;
+
+top:15px;
+
+text-align:center;
+
+}
+
+
+}
+
+
+
+/* SMALL PHONES */
+
+@media(max-width:400px){
+
+
+.balance-cards,
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero-stats{
+
+grid-template-columns:1fr;
+
+}
+
+
+.logo{
+
+font-size:20px;
+
+}
+
+
+.btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+
+}
+
+
+/* ==========================
+ MOBILE DASHBOARD IMPROVEMENTS
+========================== */
+
+
+.logout-btn{
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+
+
+/* MOBILE SIDEBAR OVERLAY */
+
+
+.sidebar-overlay{
+
+display:none;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.sidebar-overlay{
+
+display:block;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.5);
+
+z-index:1500;
+
+}
+
+
+
+/* sidebar above overlay */
+/* 
+.sidebar{
+
+z-index:2000;
+
+} */
+
+
+
+/* topbar */
+
+.topbar{
+
+position:sticky;
+
+top:0;
+
+}
+
+
+
+.page-title h2{
+
+font-size:18px;
+
+}
+
+
+
+.logout-btn{
+
+padding:8px 12px;
+
+font-size:13px;
+
+}
+
+
+
+}
+
+
+
+/* SMALL PHONE */
+
+@media(max-width:450px){
+
+
+.page-title{
+
+display:none;
+
+}
+
+
+.user-area{
+
+margin-left:auto;
+
+}
+
+
+.menu-btn{
+
+font-size:22px;
+
+}
+
+
+
+}
+
+/* ==========================
+   DASHBOARD MOBILE TOPBAR
+========================== */
+
+@media(max-width:770px){
+
+.layout{
+  display:block;
+}
+
+
+.topbar{
+
+  display:flex !important;
+  width:100%;
+  position:sticky;
+  top:0;
+  z-index:1200;
+}
+
+
+.menu-btn{
+
+  display:block !important;
+  color:white;
+  font-size:26px;
+}
+
+
+.page-title h2{
+
+  font-size:18px;
+
+}
+
+
+.user-area{
+
+  display:flex;
+
+}
+
+
+.logout-btn,
+.user-area .btn{
+
+  padding:8px 12px;
+  font-size:13px;
+
+}
+
+
+}/* ==========================
+   DASHBOARD MOBILE TOPBAR
+========================== */
+
+@media(max-width:770px){
+
+.layout{
+  display:block;
+}
+
+
+.topbar{
+
+  display:flex !important;
+  width:100%;
+  position:sticky;
+  top:0;
+  z-index:1200;
+}
+
+
+.menu-btn{
+
+  display:block !important;
+  color:white;
+  font-size:26px;
+}
+
+
+.page-title h2{
+
+  font-size:18px;
+
+}
+
+
+.user-area{
+
+  display:flex;
+
+}
+
+
+.logout-btn,
+.user-area .btn{
+
+  padding:8px 12px;
+  font-size:13px;
+
+}
+
+
+}
+
+/* ==========================
+   HOME NAVBAR MOBILE MENU
+========================== */
+
+
+.home-menu-btn{
+
+display:none;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+.navbar .container{
+
+position:relative;
+
+padding:15px 20px;
+
+}
+
+
+/* show hamburger */
+
+.home-menu-btn{
+
+display:block;
+
+order:2;
+
+}
+
+
+
+/* hide normal nav */
+
+.navlink{
+
+display:none;
+
+position:absolute;
+
+top:70px;
+
+left:0;
+
+width:100%;
+
+background:#111827;
+
+padding:25px;
+
+flex-direction:column;
+
+gap:20px;
+
+z-index:2000;
+
+}
+
+
+
+/* opened menu */
+
+.navlink.show-menu{
+
+display:flex;
+
+}
+
+
+
+/* buttons inside mobile */
+
+.nav-buttons{
+
+display:none;
+
+}
+
+
+
+.logo{
+
+font-size:22px;
+
+}
+
+
+}
+
+/* ==========================
+   FIX DASHBOARD TOPBAR MOBILE
+========================== */
+
+@media (max-width: 770px) {
+
+  .layout {
+    display: block !important;
+  }
+
+
+  .nav {
+    display: block !important;
+    width: 100%;
+  }
+
+
+  .topbar {
+
+    display: flex !important;
+
+    width: 100%;
+
+    height: auto;
+
+    padding: 15px;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #111827;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 3000;
+
+  }
+
+
+  .menu-btn {
+
+    display: block !important;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+  }
+
+
+  .page-title {
+
+    display: block !important;
+
+  }
+
+
+  .page-title h2 {
+
+    color: white;
+
+    font-size: 18px;
+
+    margin: 0;
+
+  }
+
+
+  .user-area {
+
+    display: flex !important;
+
+  }
+
+
+  .user-details {
+
+    display: none;
+
+  }
+
+
+  .sidebar {
+
+    z-index: 4000;
+
+  }
+
+}

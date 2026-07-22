@@ -17,6 +17,13 @@ export default function DashboardLayout({ children }) {
         <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
       </aside>
 
+      {sidebarOpen && (
+        <div
+          className="sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       <main className="main">{children}</main>
 
       <footer>
