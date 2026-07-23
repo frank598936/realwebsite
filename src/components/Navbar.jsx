@@ -2,23 +2,21 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export default function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function closeMenu() {
+    setMenuOpen(false);
+  }
 
   return (
-
     <header className="navbar">
-
       <div className="container">
-
-
         <Link to="/" className="logo">
           InvestPro
         </Link>
 
-
         {/* MOBILE MENU BUTTON */}
+
         <button
           className="home-menu-btn"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -26,70 +24,42 @@ export default function Navbar() {
           ☰
         </button>
 
+        <div className={`mobile-wrapper ${menuOpen ? "open" : ""}`}>
+          <nav className="navlink">
+            <NavLink to="/" onClick={closeMenu}>
+              Home
+            </NavLink>
 
+            <NavLink to="/about" onClick={closeMenu}>
+              About
+            </NavLink>
 
-        <nav className={`navlink ${menuOpen ? "show-menu" : ""}`}>
+            <NavLink to="/plans" onClick={closeMenu}>
+              Plans
+            </NavLink>
 
-          <NavLink 
-            to="/"
-            onClick={() => setMenuOpen(false)}
-          >
-            Home
-          </NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>
+              Contact
+            </NavLink>
 
+            
+          </nav>
 
-          <NavLink 
-            to="/about"
-            onClick={() => setMenuOpen(false)}
-          >
-            About
-          </NavLink>
+          <div className="nav-buttons">
+            <Link to="/login" className="mobile-login-btn" onClick={closeMenu}>
+              Login
+            </Link>
 
-
-          <NavLink 
-            to="/plans"
-            onClick={() => setMenuOpen(false)}
-          >
-            Plans
-          </NavLink>
-
-
-          <NavLink 
-            to="/contact"
-            onClick={() => setMenuOpen(false)}
-          >
-            Contact
-          </NavLink>
-
-
-        </nav>
-
-
-
-        <div className="nav-buttons">
-
-          <Link 
-            to="/login" 
-            className="login-btn btn"
-          >
-            Login
-          </Link>
-
-
-          <Link 
-            to="/register" 
-            className="register-btn btn"
-          >
-            Get Started
-          </Link>
-
-
+            <Link
+              to="/register"
+              className="mobile-register-btn"
+              onClick={closeMenu}
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
-
-
       </div>
-
     </header>
-
   );
 }
