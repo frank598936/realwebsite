@@ -28,21 +28,21 @@ export default function Navbar() {
         {/* MENU */}
         <div className={`mobile-wrapper ${menuOpen ? "open" : ""}`}>
           <nav className="navlink">
-            <NavLink to="/" onClick={closeMenu}>
+            <a href="#home" onClick={closeMenu}>
               Home
-            </NavLink>
+            </a>
 
-            <NavLink to="/about" onClick={closeMenu}>
+            <a to="/about" onClick={closeMenu}>
               About
-            </NavLink>
+            </a>
 
-            <NavLink to="/plans" onClick={closeMenu}>
+            <a href="#plans" onClick={closeMenu}>
               Plans
-            </NavLink>
+            </a>
 
-            <NavLink to="/contact" onClick={closeMenu}>
+            <a href="#footer" onClick={closeMenu}>
               Contact
-            </NavLink>
+            </a>
           </nav>
 
           <div className="nav-buttons">

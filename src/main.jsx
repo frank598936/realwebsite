@@ -23,9 +23,9 @@ createRoot(document.getElementById("root")).render(
   <AuthProvider>
     <TransactionProvider>
       <BrowserRouter>
-        <StrictMode>
+        {/* <StrictMode> */}
           <App />
-        </StrictMode>
+        {/* </StrictMode> */}
       </BrowserRouter>
     </TransactionProvider>
   </AuthProvider>,

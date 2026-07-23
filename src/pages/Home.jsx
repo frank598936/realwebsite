@@ -1,6 +1,9 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import TechnicalAnalysis from "../components/TechnicalAnalysis";
 import TradingViewChart from "../components/TradingViewChart";
+import TradingViewTicker from "../components/TradingViewTicker";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -20,8 +23,8 @@ export default function Home() {
             </p>
 
             <div className="hero-buttons">
-              <button className="primary-btn">Start Investing</button>
-              <button className="secondary-btn">View Plans</button>
+              <Link className="primary-btn" to='/'>Start Investing</Link>
+              <Link className="secondary-btn">View Plans</Link>
             </div>
 
             <div className="hero-stats">
@@ -91,9 +94,9 @@ export default function Home() {
           </div>
         </section>
 
-        <TradingViewChart/>
+        <TradingViewChart />
 
-        <section className="plans">
+        <section className="plans" id="plans">
           <div className="section-title">
             <span>Investment Plans</span>
             <h2>Choose A Plan That Fits Your Goals</h2>
@@ -116,7 +119,8 @@ export default function Home() {
                 <p>✓ Secure Platform</p>
               </div>
 
-              <button>Invest Now</button>
+              <Link className="plan-btn" to='/register'>Invest Now</Link>
+
             </div>
             <div className="plan-card">
               <h3>Silver Plan</h3>
@@ -130,7 +134,7 @@ export default function Home() {
                 <p>✓ Secure Platform</p>
               </div>
 
-              <button>Invest Now</button>
+              <Link className="plan-btn" to='/register'>Invest Now</Link>
             </div>
             <div className="plan-card">
               <h3>Gold Plan</h3>
@@ -144,7 +148,7 @@ export default function Home() {
                 <p>✓ Secure Platform</p>
               </div>
 
-              <button>Invest Now</button>
+              <Link className="plan-btn" to='/register'>Invest Now</Link>
             </div>
             <div className="plan-card">
               <h3>VIP Plan</h3>
@@ -158,7 +162,7 @@ export default function Home() {
                 <p>✓ Secure Platform</p>
               </div>
 
-              <button>Invest Now</button>
+              <Link className="plan-btn" to='/register'>Invest Now</Link>
             </div>
           </div>
         </section>
@@ -265,6 +269,8 @@ export default function Home() {
           </div>
         </section>
 
+        <TechnicalAnalysis />
+
         <section className="testimonials">
           <div className="section-title">
             <span>Testimonials</span>
@@ -316,6 +322,8 @@ export default function Home() {
           </div>
         </section>
 
+        
+
         <section className="cta">
           <div className="cta-content">
             <h2>Ready To Start Growing Your Wealth?</h2>
@@ -325,11 +333,13 @@ export default function Home() {
               financial future.
             </p>
 
-            <button>Create Free Account</button>
+            <Link className="btn-cta" to='/register'>Create Free Account</Link>
+
           </div>
         </section>
+        <TradingViewTicker />
 
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

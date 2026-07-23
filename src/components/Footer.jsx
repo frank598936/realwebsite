@@ -1,15 +1,21 @@
 export default function Footer() {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer" id="footer">
         <div className="footer-container">
           <div>
-            <h2>InvestPro</h2>
+              <h3>Contact Us</h3>
 
-            <p>
-              A modern investment platform designed for smarter financial
-              growth.
-            </p>
+              <p>
+                Our team is ready to help you.
+              </p>
+                <p>support@investpro.com</p>
+              
+                <p>+1 (800) 555-0199</p>
+              
+
+                <p>123 Financial Avenue, New York, USA</p>
+      
           </div>
 
           <div>
@@ -31,7 +37,6 @@ export default function Footer() {
 
         <div className="copyright">© 2026 InvestPro. All rights reserved.</div>
       </footer>
-
     </>
   );
 }

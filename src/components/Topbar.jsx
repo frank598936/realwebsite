@@ -52,12 +52,9 @@ export default function Topbar({ setOpen }) {
 
       <div className="user-area">
         <div className="user-details">
-          <h4>{user?.name}</h4>
+          <h4>{user?.name}</h4>        </div>
 
-          <span>{user?.role}</span>
-        </div>
-
-        <button className="logout-btn" onClick={handleLogout}>
+        <button className="btn" onClick={handleLogout}>
           Logout
         </button>
       </div>

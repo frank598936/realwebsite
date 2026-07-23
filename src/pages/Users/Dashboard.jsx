@@ -6,6 +6,8 @@ import TransactionsTable from "./TransactionsTable";
 
 import { AuthContext } from "../../context/AuthContext";
 import { getDashboard } from "../../api/dashboardApi";
+import MarketOverview from "../../components/MarketOverview";
+import TradingViewTicker from "../../components/TradingViewTicker";
 
 export default function Dashboard() {
   const { user } = useContext(AuthContext);
@@ -76,6 +78,7 @@ export default function Dashboard() {
             Make Deposit
           </Link>
         </div>
+      <TradingViewTicker/>
       </section>
 
       <section className="balance-cards">
@@ -121,6 +124,10 @@ export default function Dashboard() {
           <p>{dashboard.pendingWithdrawals}</p>
         </div>
       </section>
+
+      <>
+        <MarketOverview />
+      </>
 
       <TransactionsTable />
     </DashboardLayout>

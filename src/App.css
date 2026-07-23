@@ -12,6 +12,14 @@ body {
   background: #f4f6f9;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
 /* ==========================
    GLOBAL
 ========================== */
@@ -20,7 +28,7 @@ a {
 }
 
 .btn {
-  background: #2563eb;
+  background: #00c896;
 
   color: white;
 
@@ -38,29 +46,8 @@ a {
 }
 
 .btn:hover {
-  opacity: 0.85;
+  background: #00a97e;
 }
-
-/* ==================
-TRADING VIEWWIDGET
-================== */
-
-/* Tablet */
-
-/* @media (max-width: 900px) {
-  .tradingview-widget-container {
-    height: 900px;
-  }
-} */
-
-
-/* Mobile */
-
-/* @media (max-width: 600px) {
-  .tradingview-widget-container {
-    height: 700px;
-  }
-} */
 
 /* ==========================
    NAVBAR
@@ -502,7 +489,7 @@ TRADING VIEWWIDGET
   margin: 12px 0;
 }
 
-.plan-card button {
+.plan-card .plan-btn {
   width: 100%;
   padding: 14px;
   background: #00c896;
@@ -513,7 +500,7 @@ TRADING VIEWWIDGET
   font-weight: 600;
 }
 
-.plan-card button:hover {
+.plan-card .plan-btn:hover {
   background: #00a97e;
 }
 
@@ -709,7 +696,7 @@ TRADING VIEWWIDGET
   margin-bottom: 35px;
 }
 
-.cta button {
+.cta .btn-cta {
   background: #00c896;
 
   color: white;
@@ -727,7 +714,7 @@ TRADING VIEWWIDGET
   cursor: pointer;
 }
 
-.cta button:hover {
+.cta .btn-cta:hover {
   background: #00a97e;
 }
 
@@ -735,7 +722,7 @@ TRADING VIEWWIDGET
 .footer {
   background: #061a2e;
 
-  color: white;
+  color: #00c896;
 
   padding: 60px 8% 20px;
 }
@@ -747,6 +734,16 @@ TRADING VIEWWIDGET
 
   gap: 30px;
 }
+
+.contact-item h4 {
+  color: white;
+}
+
+.contact-item{
+  display: flex;
+  gap: 9px;
+}
+
 
 .footer h2 {
   color: #00c896;
@@ -880,21 +877,10 @@ TRADING VIEWWIDGET
 }
 
 .auth-box input:focus {
-  border-color: #0057ff;
+  border-color: #00c896;
   box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.1);
 }
 
-/* .terms-check {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 14px;
-  color: #666;
-} */
-/* 
-.terms-check input {
-  margin-top: 5px;
-} */
 
 .auth-footer {
   text-align: center;
@@ -902,7 +888,7 @@ TRADING VIEWWIDGET
 }
 
 .auth-footer a {
-  color: #0057ff;
+  color: #00c896;
   font-weight: 600;
 }
 
@@ -938,6 +924,8 @@ TRADING VIEWWIDGET
   padding: 30px;
 
   border-radius: 15px;
+
+  margin-bottom: 20px;
 }
 
 .balance-cards {
@@ -1378,7 +1366,7 @@ table th {
 }
 
 .active-link {
-  background: #2563eb;
+  background: #00c896;
 }
 
 .close-menu {
