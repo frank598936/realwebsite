@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <Navbar />
 
-        <section className="hero">
+        <section className="hero" id="hero">
           <div className="hero-content">
             <span className="hero-badge">Trusted Investment Platform</span>
 

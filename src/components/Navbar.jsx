@@ -28,13 +28,13 @@ export default function Navbar() {
         {/* MENU */}
         <div className={`mobile-wrapper ${menuOpen ? "open" : ""}`}>
           <nav className="navlink">
-            <a to="/home" onClick={closeMenu}>
+            <Link to="/" onClick={closeMenu}>
               Home
-            </a>
+            </Link>
 
-            <a to="/about" onClick={closeMenu}>
+            <Link to="/about" onClick={closeMenu}>
               About
-            </a>
+            </Link>
 
             <a href="#plans" onClick={closeMenu}>
               Plans
