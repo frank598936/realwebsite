@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import TradingViewChart from "../components/TradingViewChart";
 
 export default function Home() {
   return (
@@ -89,6 +90,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <TradingViewChart/>
 
         <section className="plans">
           <div className="section-title">

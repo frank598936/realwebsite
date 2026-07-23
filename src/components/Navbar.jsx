@@ -4,26 +4,28 @@ import { useState } from "react";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function closeMenu() {
+  const closeMenu = () => {
     setMenuOpen(false);
-  }
+  };
 
   return (
     <header className="navbar">
       <div className="container">
-        <Link to="/" className="logo">
+        {/* LOGO */}
+        <Link to="/" className="logo" onClick={closeMenu}>
           InvestPro
         </Link>
 
-        {/* MOBILE MENU BUTTON */}
-
+        {/* MOBILE BUTTON */}
         <button
+          type="button"
           className="home-menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
         >
-          ☰
+          {menuOpen ? "✕" : "☰"}
         </button>
 
+        {/* MENU */}
         <div className={`mobile-wrapper ${menuOpen ? "open" : ""}`}>
           <nav className="navlink">
             <NavLink to="/" onClick={closeMenu}>
@@ -41,8 +43,6 @@ export default function Navbar() {
             <NavLink to="/contact" onClick={closeMenu}>
               Contact
             </NavLink>
-
-            
           </nav>
 
           <div className="nav-buttons">
