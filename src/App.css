@@ -72,6 +72,13 @@ a {
   text-decoration: none;
 }
 
+.navbar .mobile-wrapper{
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* ==========================
    NAV LINKS
 ========================== */
@@ -224,16 +231,18 @@ a {
   /* mobile buttons */
 
   .nav-buttons {
-    display: flex;
-
     width: 100%;
-
+    display: flex;
+    justify-content: left;
+    
+    flex-direction: column;
+    
     gap: 15px;
+
   }
 
   .nav-buttons a {
-    width: 100%;
-
+    width: 40%;
     text-align: center;
   }
 
