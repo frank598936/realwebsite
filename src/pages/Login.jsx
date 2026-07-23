@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../context/AuthContext";
 import Notification from "../components/Notification";
+import Navbar from "../components/Navbar";
 
 export default function Login() {
   const { login } = useContext(AuthContext);
@@ -60,6 +61,8 @@ export default function Login() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="auth-page">
       <Notification message={notification.message} type={notification.type} />
 
@@ -94,5 +97,6 @@ export default function Login() {
         </form>
       </div>
     </div>
+    </>
   );
 }

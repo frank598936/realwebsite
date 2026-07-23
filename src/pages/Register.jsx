@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { registerUser } from "../api/authApi";
 import Notification from "../components/Notification";
+import Navbar from "../components/Navbar";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -80,74 +81,77 @@ export default function Register() {
   }
 
   return (
-    <div className="auth-page">
-      <Notification message={notification.message} type={notification.type} />
+    <>
+      <Navbar />
+      <div className="auth-page">
+        <Notification message={notification.message} type={notification.type} />
 
-      <div className="auth-box">
-        <form className="auth-form" onSubmit={handleRegister}>
-          <h2>Create Account</h2>
+        <div className="auth-box">
+          <form className="auth-form" onSubmit={handleRegister}>
+            <h2>Create Account</h2>
 
-          <input
-            name="name"
-            placeholder="Name"
-            value={form.name}
-            onChange={handleChange}
-            required
-          />
+            <input
+              name="name"
+              placeholder="Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+            />
 
-          <input
-            name="email"
-            placeholder="Email"
-            type="email"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
+            <input
+              name="email"
+              placeholder="Email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
 
-          <input
-            name="phone"
-            placeholder="Phone"
-            value={form.phone}
-            onChange={handleChange}
-            required
-          />
+            <input
+              name="phone"
+              placeholder="Phone"
+              value={form.phone}
+              onChange={handleChange}
+              required
+            />
 
-          <input
-            name="country"
-            placeholder="Country"
-            value={form.country}
-            onChange={handleChange}
-            required
-          />
+            <input
+              name="country"
+              placeholder="Country"
+              value={form.country}
+              onChange={handleChange}
+              required
+            />
 
-          <input
-            name="password"
-            placeholder="Password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            required
-          />
+            <input
+              name="password"
+              placeholder="Password"
+              type="password"
+              value={form.password}
+              onChange={handleChange}
+              required
+            />
 
-          <input
-            name="confirmPassword"
-            placeholder="Confirm Password"
-            type="password"
-            value={form.confirmPassword}
-            onChange={handleChange}
-            required
-          />
+            <input
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              type="password"
+              value={form.confirmPassword}
+              onChange={handleChange}
+              required
+            />
 
-          <button className="btn" type="submit">
-            Register
-          </button>
+            <button className="btn" type="submit">
+              Register
+            </button>
 
-          <p className="auth-footer">
-            Already have account?
-            <Link to="/login">Login</Link>
-          </p>
-        </form>
+            <p className="auth-footer">
+              Already have account?
+              <Link to="/login">Login</Link>
+            </p>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
