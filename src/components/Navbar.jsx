@@ -28,7 +28,7 @@ export default function Navbar() {
         {/* MENU */}
         <div className={`mobile-wrapper ${menuOpen ? "open" : ""}`}>
           <nav className="navlink">
-            <a href="#home" onClick={closeMenu}>
+            <a to="/home" onClick={closeMenu}>
               Home
             </a>
 

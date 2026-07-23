@@ -58,7 +58,7 @@ a {
 
   background: #0b1220;
 
-  position: relative;
+  position: fixed;
 
   z-index: 1000;
 }
@@ -322,6 +322,7 @@ a {
 }
 
 .hero-content {
+  margin-top: 3rem;
   flex: 1;
 }
 
@@ -842,6 +843,7 @@ a {
 }
 
 .auth-box {
+  margin-top: 6rem;
   width: 100%;
   max-width: 450px;
   background: #fff;
