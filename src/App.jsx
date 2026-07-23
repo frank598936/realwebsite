@@ -21,7 +21,6 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminUser from "./pages/admin/AdminUsers";
 import AdminDeposits from "./pages/admin/AdminDeposits";
 import AdminWithdrawals from "./pages/admin/AdminWithdrawals";
-import Support from "./pages/Users/Support";
 
 function App() {
   return (
@@ -66,15 +65,6 @@ function App() {
         element={
           <ProtectedRoute role="user">
             <Profile />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route
-        path="/support"
-        element={
-          <ProtectedRoute>
-            <Support />
           </ProtectedRoute>
         }
       />

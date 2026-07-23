@@ -23,11 +23,6 @@ export default function Sidebar({ open, setOpen }) {
     },
 
     {
-      name: "Support Chat",
-      path: "/support",
-    },
-
-    {
       name: "Profile",
       path: "/profile",
     },
